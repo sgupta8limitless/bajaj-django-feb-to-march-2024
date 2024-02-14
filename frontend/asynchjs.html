@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        
+
+            // promise ->  resolve,reject
+
+
+            // function doSomething()
+            // {
+
+            //     return new Promise((resolve,reject)=>{
+
+            //         //task
+            //         if(1!==1)
+            //         {
+            //             resolve(0);
+            //         }
+            //         else 
+            //         {
+            //             reject("some problem")
+            //         }
+
+            //     })
+
+            // }
+
+
+            // async function getUser()
+            // {
+            //     //task
+            //     if(1===1)
+            //     {
+            //         let user = ["saurabh","harsh"];
+
+            //         return user;
+            //     }
+            //     else 
+            //     {
+            //         throw new Error("Some problem");
+            //     }
+
+               
+               
+            // }
+
+            // async function getPost(user)
+            // {
+            //     //task
+            //     if(1===1)
+            //     {
+            //         let post = ["post1","post2"];
+
+            //         return post;
+            //     }
+            //     else 
+            //     {
+            //         throw new Error("Some problem");
+            //     }
+
+               
+               
+            // }
+
+            
+            // getUser()
+            // .then((user)=>{
+
+            //     return getPost(user)
+                
+
+            // })
+            // .then((post)=>{
+
+            // })
+            // .catch((err)=>{
+
+            // })
+
+
+
+            // async function doSomething()
+            // {   
+            //     try 
+            //     {
+            //         let user = await getUser();
+            //         let post = await getPost(user);
+            //     }
+            //     catch(e){
+                    
+            //     }
+                
+
+                
+
+
+            // }
+          
+
+            fetch("https://jsonplaceholder.typicode.com/users",{
+                method:"GET"
+            })
+            .then((response)=>{
+                return response.json()
+            })
+            .then((data)=>{
+                console.log(data)
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
+
+
+            async function getData()
+            {
+                let response =   await fetch("https://jsonplaceholder.typicode.com/users",{
+                                        method:"GET"
+                                    })
+
+                let data = await response.json()
+                                
+                console.log(data);
+
+            }
+
+
+            getData();
+
+         
+
+
+
+            
+
+
+           
+
+
+           
+           
+
+           
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .one 
+        {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="one">
+
+    </div>
+
+    <p>
+        Hello
+    </p>
+
+    <p id="ele">
+        Ola
+    </p>
+
+    <button onclick="changeColor()">Click</button>
+
+
+    <script>
+
+        function changeColor()
+        {
+
+            console.log(event);
+
+            let ele =  document.getElementsByClassName("one")[0];
+
+            ele.style.backgroundColor = "green";
+        }
+
+       
+
+
+        // console.log(document.getElementsByTagName("div")[0]);
+
+        // console.log(document.getElementsByClassName("one"))
+
+        // console.log(document.getElementById("ele"))
+
+        
+
+        
+
+        
+    
+
+
+
+    </script>
+
+    
+</body>
+</html>
