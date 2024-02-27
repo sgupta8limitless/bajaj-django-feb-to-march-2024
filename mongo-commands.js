@@ -351,6 +351,22 @@ db.orders.aggregate([
 
 ])
 
+// how to see stats of a query 
+
+db.collection.anyQuery().explain("executionStats")
+
+
+// to create a index 
+
+db.collection.createIndex({prop:[1,-1]})
+
+
+db.collection.createIndexes([{},{}])
+
+
+db.collection.dropIndex("index_name")
+
+
 
 
 
