@@ -1,0 +1,31 @@
+.users
+{
+    padding: 20px;
+    background-color: lightgray;
+}
+
+.name 
+{
+    padding: 10px;
+    font-family: "Roboto";
+}
+
+.avengers
+{
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: black;
+    display: flex;
+    column-gap: calc(20%/3);
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.avenger
+{
+    width: 20%;
+    padding: 10px;
+    background-color: white;
+    font-family: roboto;
+}

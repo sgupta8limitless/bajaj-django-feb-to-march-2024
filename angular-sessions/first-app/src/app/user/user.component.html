@@ -1,0 +1,26 @@
+<div class="users">
+
+    @for(user of users;track $index){
+        <h1 class="name">{{user}}</h1>
+    }
+
+
+</div>
+
+
+<div class="avengers">
+
+
+    @for(avenger of avengers;track avenger.id)
+    {
+        <div class="avenger">
+            <h1>Name : {{avenger.name}}</h1>
+            <h2>Age : {{avenger.age}}</h2>
+            <h3>Planet : {{avenger.planet}}</h3>
+        </div>
+    }
+    
+
+</div>
+
+

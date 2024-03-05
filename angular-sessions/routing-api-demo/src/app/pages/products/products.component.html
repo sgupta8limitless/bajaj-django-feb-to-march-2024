@@ -1,0 +1,14 @@
+<section class="products">
+    <h1 class="section-title">All Products</h1>
+
+    <div class="products-list">
+
+        @for(product of products;track product.id)
+        {
+            <app-single-product class="product-item" [product]=product></app-single-product>
+        }
+       
+
+    </div>
+   
+</section>
