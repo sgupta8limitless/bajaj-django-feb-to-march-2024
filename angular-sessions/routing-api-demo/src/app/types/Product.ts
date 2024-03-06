@@ -1,13 +1,9 @@
 export default interface Product
 {
-    id?: Number,
-    title?: String,
+    _id?: Number,
+    name?: String,
     price?: Number,
-    description?: String,
+    imageUrl?: String,
     category?: String,
-    image?: String,
-    rating?: {
-        rate: Number,
-        count: Number
-    }
+   
 }

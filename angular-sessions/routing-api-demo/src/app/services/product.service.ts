@@ -1,6 +1,7 @@
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import Product from '../types/Product';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,13 @@ export class ProductService {
 
   getProducts():Observable<any>
   {
-    return this.httpClient.get("https://fakestoreapi.com/products")
+    return this.httpClient.get("http://localhost:3000/products")
   
+  }
+
+  createProduct(product:any):Observable<any>
+  {
+    return this.httpClient.post("http://localhost:3000/products",product);
   }
 
 
