@@ -1,6 +1,6 @@
 export default interface Product
 {
-    _id?: Number,
+    _id?: String,
     name?: String,
     price?: Number,
     imageUrl?: String,

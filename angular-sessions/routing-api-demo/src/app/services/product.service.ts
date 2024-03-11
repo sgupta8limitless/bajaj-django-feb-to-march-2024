@@ -21,6 +21,11 @@ export class ProductService {
     return this.httpClient.post("http://localhost:3000/products",product);
   }
 
+  deleteProduct(id:String):Observable<any>
+  {
+    return this.httpClient.delete(`http://localhost:3000/products/${id}`);
+  }
+
 
 
 }
