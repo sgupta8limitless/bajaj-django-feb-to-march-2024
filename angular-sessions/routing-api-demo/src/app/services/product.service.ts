@@ -16,6 +16,11 @@ export class ProductService {
   
   }
 
+  getProduct(id:String):Observable<any>
+  {
+    return this.httpClient.get(`http://localhost:3000/products/${id}`)
+  }
+
   createProduct(product:any):Observable<any>
   {
     return this.httpClient.post("http://localhost:3000/products",product);
@@ -24,6 +29,11 @@ export class ProductService {
   deleteProduct(id:String):Observable<any>
   {
     return this.httpClient.delete(`http://localhost:3000/products/${id}`);
+  }
+
+  updateProduct(id:String,product:any):Observable<any>
+  {
+    return this.httpClient.put(`http://localhost:3000/products/${id}`,product);
   }
 
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ProductService } from '../../services/product.service';
+import { ProductService } from '../../../services/product.service';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -16,7 +16,7 @@ export class AddProductComponent {
 
   name = new FormControl("",[
     Validators.required,
-    Validators.minLength(10)
+    Validators.minLength(5)
   ])
 
   price = new FormControl("",[
@@ -41,11 +41,14 @@ export class AddProductComponent {
 
   createProduct()
   {
-    
+    if(this.productForm.valid)
+    {
       this.productService.createProduct(this.productForm.value).subscribe((data)=>{
         console.log(data);
         this.productForm.reset()
       })
+    }
+      
     
   }
 

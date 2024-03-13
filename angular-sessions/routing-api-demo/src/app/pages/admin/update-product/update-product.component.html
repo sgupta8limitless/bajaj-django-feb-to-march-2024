@@ -1,13 +1,17 @@
 <section class="add-product">
 
+    <h1 class="section-title">Update Product</h1>
+
     <form class="product-form" [formGroup]=productForm>
         
-        <h1>Update Product</h1>
+       
         <input class="inp" type="text" placeholder="Enter Name" [formControl]=name>
+        <p [hidden]="!name.errors?.['required']" class="error">Name is Required</p>
+        <p [hidden]="!name.errors?.['minlength']" class="error">Minimum Length is 5</p>
         <input class="inp" type="number" placeholder="Enter Price" [formControl]=price>
         <input class="inp" type="text" placeholder="Enter Image Url" [formControl]=imageUrl>
         <input class="inp" type="text" placeholder="Enter Category" [formControl]=category>
-        <button class="btn" >Update Product</button>
+        <button class="btn" (click)="update()" [disabled]=productForm.invalid>Update Product</button>
        
 
     </form>      

@@ -2,7 +2,7 @@
 {
     width: 100%;
     padding: 30px 100px;
-    background-color: #f9f9f9;
+    background-color: #ebebeb;
     font-family: segoe UI;
     min-height:100vh;
     
@@ -17,9 +17,25 @@
 .products-list 
 {
     width: 100%;
-    padding: 20px;
-    /* background-color: red; */
+    padding: 40px 20px;
+    background-color: white;
     margin-top:30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+
+
+.search 
+{
+    height: 50px;
+    width: 25%;
+    border-radius: 10px;
+    text-indent: 20px;
+    border: 1px solid #e7e7e7;
+    font-size: 16px;
 }
 
 .table 

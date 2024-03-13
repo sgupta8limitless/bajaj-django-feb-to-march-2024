@@ -4,6 +4,16 @@
 
     <div class="products-list">
 
+        
+       
+
+        <div class="utils">
+            <a routerLink="/admin/product/add" class="btn">
+                <i class="fa-solid fa-plus"></i>
+            </a>
+            <input type="search" (keyup)="searchByName()" [(ngModel)]=name class="search" placeholder="Search Name">
+        </div>
+
         <table class="table">
             <thead>
                 <tr>
@@ -19,13 +29,13 @@
             </thead>
             <tbody>
 
-                @for(product of products;track product._id)
+                @for(product of filteredProducts;track product._id)
                 {
                     <tr>
                         <td>{{$index+1}}</td>
-                        <td>{{product.name}}</td>
-                        <td>{{product.price}}</td>
-                        <td>{{product.category }}</td>
+                        <td>{{product?.name | productInit:product?.category }}</td>
+                        <td>{{product.price | currency:"INR" }}</td>
+                        <td>{{product?.category | uppercase}}</td>
                         <td>
                             <img class="tab-img" [src]=product.imageUrl>
                         </td>

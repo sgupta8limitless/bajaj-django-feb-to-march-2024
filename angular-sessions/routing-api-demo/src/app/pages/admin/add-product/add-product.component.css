@@ -24,5 +24,11 @@
     align-items: flex-start;
 }
 
+ h1 
+{
+    font-size: 40px;
+    font-weight: 300;
+}
+
 
 
