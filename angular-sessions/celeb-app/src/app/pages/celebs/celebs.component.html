@@ -1,0 +1,17 @@
+<section class="celeb-container">
+
+    <h1>All Celebs</h1>
+
+    <div class="celebs-box"> 
+        
+        @for(celeb of celebs;track $index)
+        {
+            <app-single-celeb class="celeb" [celeb]=celeb></app-single-celeb>
+            
+        }
+
+    </div>
+
+
+</section>
+

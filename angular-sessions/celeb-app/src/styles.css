@@ -1,0 +1,15 @@
+*
+{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: segoe UI;
+}
+
+.btn 
+{
+    padding: 10px 20px;
+    background-color: #323232;
+    color: white;
+    border-radius: 10px;
+}
