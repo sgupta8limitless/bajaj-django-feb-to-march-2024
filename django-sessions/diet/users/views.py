@@ -30,10 +30,10 @@ def login(request):
 
     user = User.objects.filter(email=email).first()
     if user is None:
-        return Response({"message":"User Doesnt Exist"})
+        return Response({"message":"User Doesnt Exist","loggedIn":False})
     
     if not user.check_password(password):
-        return Response({"message":"Incorrect Password"})
+        return Response({"message":"Incorrect Password","loggedIn":False})
     
     payload = {
         "id":user.id,
@@ -44,12 +44,11 @@ def login(request):
     token = jwt.encode(payload,"secret",algorithm="HS256")
     
 
-    return Response({"message":"Successfull","token":token})
+    return Response({"message":"Successfull","token":token,"loggedIn":True})
 
 
 @api_view(['get'])
 def getFoodItems(request):
-    print("in between")
     return Response({"message":"secured Endpoint"})
     
 
